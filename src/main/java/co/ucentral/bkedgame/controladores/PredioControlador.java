@@ -15,12 +15,12 @@ public class PredioControlador {
     @Autowired
     private PredioServicio predioServicio;
 
-    @GetMapping
+    @GetMapping("/listar")
     public List<Predio> listar() {
         return predioServicio.listarTodos();
     }
 
-    @PostMapping
+    @PostMapping("/crear")
     public Predio crear(@RequestBody PredioDTO predio) {
         return predioServicio.crear(predio);
     }
